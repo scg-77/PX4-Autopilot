@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "cmake.sourceDirectory": "/home/chin/dev/px4/PX4-Autopilot2",
+    "cmake.ignoreCMakeListsMissing": true
+}
