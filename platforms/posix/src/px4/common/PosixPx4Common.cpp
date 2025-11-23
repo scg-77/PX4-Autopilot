@@ -1,6 +1,6 @@
-#include "posixPx4Common.h"
+#include "PosixPx4Common.h"
 
-std::string file_basename(std::string const &pathname)
+std::string ExtractLastPathComponent(std::string const &pathname)
 {
 	struct MatchPathSeparator {
 		bool operator()(char ch) const
@@ -8,5 +8,6 @@ std::string file_basename(std::string const &pathname)
 			return ch == '/';
 		}
 	};
+	
 	return std::string(std::find_if(pathname.rbegin(), pathname.rend(), MatchPathSeparator()).base(), pathname.end());
 }
