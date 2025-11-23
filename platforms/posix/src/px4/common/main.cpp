@@ -1,5 +1,5 @@
 #include <px4_platform_common/defines.h>
-#include "posixPx4Common.h"
+#include "PosixPx4Common.h"
 
 using namespace std;
 
@@ -25,7 +25,7 @@ int main(int argc, char **argv){
         /* The executed binary name could start with a path, so strip it away */
 		const string full_binary_name = argv[0];
         cout << "full_binary_name=" << full_binary_name ;
-        const string binary_name = file_basename(full_binary_name);
+        const string binary_name = ExtractLastPathComponent(full_binary_name);
         cout << "binary_name=" << binary_name ;        
     }
 
